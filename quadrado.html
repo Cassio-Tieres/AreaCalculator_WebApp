@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="img/logo.png">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Área quadrado</title>
+</head>
+
+<body>
+    <nav class="nav-extended indigo">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">Area Calculator</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Contato do desenvolvedor</a></li>
+          </ul>
+        </div>
+        <div class="nav-content">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="quadrado.html">Quadrado</a></li>
+            <li class="tab"><a href="retangulo.html">Retângulo</a></li>
+            <li class="tab"><a href="paralelograma.html">Paralelograma</a></li>
+            <li class="tab"><a href="losango.html">Losango</a></li>
+            <li class="tab"><a href="trianguloqualquer.html">Triângulo Qualquer</a></li>
+            <li class="tab"><a href="trianguloequilatero.html">Triângulo Equilátero</a></li>
+            <li class="tab"><a href="trapezio.html">Trapézio</a></li>
+            <li class="tab"><a href="circulo.html">Círculo</a></li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title center">Quadrado</span>
+            <form action="action.php" method="POST">
+                <label>Lado:</label>
+                <input type="text" name="lado_quadrado" id="lado_quadrado" placeholder="0">
+                <input type="button" value="Calcular" onclick="calcular_quadrado()">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+        <h2 >Fórmula: A = L²</h2>
+        <p class="text-resulte">Resultado: </p>
+        <h2 id="resultado" class="text-resulte" name="resultado">0</h2> <span>m²</span>
+    </div>
+
+
+    <script>      
+    function calcular_quadrado() {
+      var lado_quadrado = parseInt(document.getElementById('lado_quadrado').value);
+      var lado_quadrado = parseInt(document.getElementById('lado_quadrado').value);
+      document.getElementById('resultado').innerHTML = lado_quadrado * lado_quadrado;
+    }
+    </script>
+</body>
+</html>

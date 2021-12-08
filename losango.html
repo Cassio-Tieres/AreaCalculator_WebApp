@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/style.css">
+
+        <link rel="icon" href="img/logo.png">
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <title>Área Losango</title>
+    </head>
+
+    <body>
+        <nav class="nav-extended indigo">
+            <div class="nav-wrapper">
+              <a href="index.html" class="brand-logo">Area Calculator</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Contato do desenvolvedor</a></li>
+              </ul>
+            </div>
+            <div class="nav-content">
+              <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                  <li class="tab"><a href="quadrado.html">Quadrado</a></li>
+                  <li class="tab"><a href="retangulo.html">Retângulo</a></li>
+                  <li class="tab"><a href="paralelograma.html">Paralelograma</a></li>
+                  <li class="tab"><a href="losango.html">Losango</a></li>
+                  <li class="tab"><a href="trianguloqualquer.html">Triângulo Qualquer</a></li>
+                  <li class="tab"><a href="trianguloequilatero.html">Triângulo Equilátero</a></li>
+                  <li class="tab"><a href="trapezio.html">Trapézio</a></li>
+                  <li class="tab"><a href="circulo.html">Círculo</a></li>
+                </ul>
+              </div>
+        </nav>
+
+        <div class="row">
+          <div class="col s12 m6">
+            <div class="card blue-grey darken-1">
+              <div class="card-content white-text">
+                <span class="card-title center">Losango</span>
+                <form action="action.php" method="POST">
+                    <label>Diagonal maior:</label>
+                    <input type="text" name="Diagonal_maior" id="Diagonal_maior" placeholder="0">
+                    <label>Diagonal menor:</label>
+                    <input type="text" name="Diagonal_menor" id="Diagonal_menor" placeholder="0">
+                    <input type="button" value="Calcular" onclick="calcular_losango()">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info">
+            <h2>Fórmula: A = D.d/2</h2>
+            <p>Resultado: </p>
+            <h2 id="resultado">0</h2> <span>m²</span>
+        </div>
+        <script>
+          function calcular_losango(){
+            var diagonal_maior = parseInt(document.getElementById('Diagonal_maior').value);
+            var diagonal_menor = parseInt(document.getElementById('Diagonal_menor').value);
+            document.getElementById('resultado').innerHTML = diagonal_maior * diagonal_menor / 2;
+          }
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,10 @@
+#config-nav {
+    text-align: center;
+}
+.info {
+    text-align: center;
+}
+#resultado {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+}
